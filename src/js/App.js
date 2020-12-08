@@ -1,47 +1,65 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useParams
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import '../css/reset.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <ul>
-            <li>
-              <Link to="/netflix">Netflix</Link>
-            </li>
-            <li>
-              <Link to="/zillow-group">Zillow Group</Link>
-            </li>
-            <li>
-              <Link to="/yahoo">Yahoo</Link>
-            </li>
-            <li>
-              <Link to="/modus-create">Modus Create</Link>
-            </li>
-          </ul>
-          <Switch>
-            <Route path="/:id" children={<Child />} />
-          </Switch>
-        </header>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
+        <hr />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
 }
 
-function Child() {
-  let { id } = useParams();
+function Home() {
   return (
     <div>
-      <h3>THIS IS : {id} page</h3>
+      <h2>Home</h2>
+    </div>
+  );
+}
+
+function About() {
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
+}
+
+function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
     </div>
   );
 }
