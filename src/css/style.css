@@ -1,0 +1,59 @@
+.title {
+  font-size: 1.5em;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+}
+/* .sign-in-page {
+  text-align: center;
+  margin-top: 10%;
+  line-height: 300%;
+} */
+
+.product-card-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-card {
+  background-color: lightgray;
+  padding: 20px;
+}
+
+.modal-fix {
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  z-index: 30;
+  text-align: center;
+  padding-top: 5%;
+  line-height: 200%;
+  overflow: auto;
+}
+
+.single-product-modal {
+  background-color: aquamarine;
+}
+
+.cart-modal {
+  background-color: pink;
+}
+
+.sign-out-modal {
+  background-color: rgb(255, 255, 171);
+}
+
+.singleStaffForm {
+  padding: 1.5rem;
+  border: 1px solid black;
+  display: flex;
+}
+
+.error_message {
+  color: red;
+}
